@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="../contact.css">
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<header>
+    <div class="navbar">
+      <nav>
+        <a href="../index.html" id="logo">Rihab Kacem</a>
+        <ul>
+            <li><a href="../pages/Parcours.html">Parcours</a></li>
+            <li><a href="../pages/académique.html">académique</a></li>
+            <li><a href="../pages/À propos moi.html">À propos moi</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+            <li><a href="../pages/quiz.html">Quiz</a></li>
+            <li><a href="../pages/témoignage.html">témoignage</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<body>
+
+    <!-- Header Section Starts -->
+   
+    <!-- Header Section Ends -->
+
+    <!-- Contact Us Section Start -->
+    <article id="contact">
+        <div class="contact-in">
+            <div class="contact-map">
+                <h2>Mon Adresse</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.5348581037185!2d10.7600196!3d34.739822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13002cda1486c695%3A0x22dfe0a62c50ce6f!2sSfax!5e0!3m2!1sen!2stn!4v1713826777577!5m2!1sen!2stn"
+                    width="600" height="450" style="border:0;" allowfullscreen loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>            
+            <div class="contact-form">
+                <h2>Formulaire de Contact</h2>
+                <form>
+                    <label for="nom">Nom et Prénom :</label>
+                    <input type="text" id="nom" placeholder="Votre nom et prénom" required class="contact-form-txt" />
+
+                    <label for="age">Âge :</label>
+                    <input type="number" id="age" name="age" value="18" min="18" required class="contact-form-txt">
+
+                    <label for="email">Adresse e-mail :</label>
+                    <input type="email" id="email" name="email" placeholder="Veuillez saisir une @"
+                        required class="contact-form-txt">
+
+                    <label for="telephone">Téléphone :</label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="+216" required class="contact-form-txt">
+
+                    <label for="sujet">Sujet :</label>
+                    <select id="sujet" name="sujet" required class="contact-form-label">
+                        <option value="demande">Demande spéciale</option>
+                        <option value="critique">Critique</option>
+                        <option value="question">Question</option>
+                    </select>
+
+                    <label for="message">Message :</label>
+                    <textarea id="message" placeholder="Message" class="contact-form-textarea" required></textarea>
+
+                    <button type="submit" class="contact-form-btn">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </article>
+    <!-- Contact Section End -->
+
+    <!-- Footer Section Starts -->
+    <div class="footer">
+        <p>&copy; creé par rihab kacem. Tous droits réservés.</p>
+    </div>
+    <!-- Footer Section Ends -->
+
+</body>
+
+</html>

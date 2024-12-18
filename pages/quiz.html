@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz : Dessins Animés</title>
+    <link rel="stylesheet" href="../styleQuiz.css">
+</head>
+<header>
+    <div class="navbar">
+      <nav>
+        <a href="../index.html" id="logo">Rihab Kacem</a>
+        <ul>
+            <li><a href="../pages/Parcours.html">Parcours</a></li>
+            <li><a href="../pages/académique.html">académique</a></li>
+            <li><a href="../pages/À propos moi.html">À propos moi</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+            <li><a href="../pages/quiz.html">Quiz</a></li>
+            <li><a href="../pages/témoignage.html">témoignage</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<body>
+
+    <div class="quiz-container">
+        <!-- Introduction -->
+        <div class="intro">
+            <p>Est-ce que la nostalgie vous touche parfois ? Essayons ce quiz ensemble !</p>
+        </div>
+
+        <h1>Quiz : Dessins Animés</h1>
+        <form id="quizForm">
+            <div class="question">
+                <label>1. Quel est le nom du chien dans la série "Tom et Jerry" ?</label>
+                <div class="answers">
+                    <label>
+                        <input type="radio" name="q1" value="a">
+                        Spike
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="b">
+                        Scooby-Doo
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="c">
+                        Pluto
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>2. Quel est le nom du héros dans "Les Aventures de Tintin" ?</label>
+                <div class="answers">
+                    <label>
+                        <input type="radio" name="q2" value="a">
+                        Astérix
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="b">
+                        Tintin
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="c">
+                        Lucky Luke
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>3. Qui a créé le personnage de Mickey Mouse ?</label>
+                <div class="answers">
+                    <label>
+                        <input type="radio" name="q3" value="a">
+                        Walt Disney
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="b">
+                        Tex Avery
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="c">
+                        Chuck Jones
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>4. Quel est le nom du chat orange dans "Garfield" ?</label>
+                <div class="answers">
+                    <label>
+                        <input type="radio" name="q4" value="a">
+                        Garfield
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="b">
+                        Tom
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="c">
+                        Felix
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>5. Dans quel film Pixar trouve-t-on les personnages de Woody et Buzz Lightyear ?</label>
+                <div class="answers">
+                    <label>
+                        <input type="radio" name="q5" value="a">
+                        Monstres & Cie
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="b">
+                        Toy story
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="c">
+                        Le Monde de Nemo
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>6. Quel dessin animé a introduit les personnages de Simba et Scar ?</label>
+                <div class="answers">
+                    <label>
+                        <input type="radio" name="q6" value="a">
+                        Le Roi Lion
+                    </label>
+                    <label>
+                        <input type="radio" name="q6" value="b">
+                        Aladdin
+                    </label>
+                    <label>
+                        <input type="radio" name="q6" value="c">
+                        La Belle et la Bête
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>7. Quel est le nom du célèbre dragon dans "Shrek" ?</label>
+                <div class="answers">
+                    <label>
+                        <input type="radio" name="q7" value="a">
+                        Mushu
+                    </label>
+                    <label>
+                        <input type="radio" name="q7" value="b">
+                        Dragon
+                    </label>
+                    <label>
+                        <input type="radio" name="q7" value="c">
+                        Smaug
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>8. Quel est le nom de la série animée dans laquelle les personnages sont des enfants qui vivent dans un terrain vague ?</label>
+                <div class="answers">
+                    <label>
+                        <input type="radio" name="q8" value="a">
+                        Les Simpson
+                    </label>
+                    <label>
+                        <input type="radio" name="q8" value="b">
+                        South park
+                    </label>
+                    <label>
+                        <input type="radio" name="q8" value="c">
+                        Beavis and Butt-Head
+                    </label>
+                </div>
+            </div>
+
+            <button type="button" onclick="submitQuiz()">Soumettre</button>
+        </form>
+
+        <div class="result" id="result" style="display:none;">
+            <h2>Résultats :</h2>
+            <p id="score"></p>
+            <ul id="correctAnswersList"></ul>
+        </div>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            var score = 0;
+            var totalQuestions = 8; // Ajustez en fonction du nombre de questions
+            var answers = {
+                q1: 'a',
+                q2: 'b',
+                q3: 'a',
+                q4: 'a',
+                q5: 'b',
+                q6: 'a',
+                q7: 'b',
+                q8: 'b'
+                // Ajoutez d'autres réponses pour plus de questions
+            };
+
+            var correctAnswersList = [];
+            for (var i = 1; i <= totalQuestions; i++) {
+                // Utilisation de getElementsByName pour chaque question
+                var userAnswer = document.getElementsByName('q' + i);
+                for (var j = 0; j < userAnswer.length; j++) {
+                    if (userAnswer[j].checked) {
+                        if (userAnswer[j].value === answers['q' + i]) {
+                            score++;
+                            correctAnswersList.push('Question ' + i + ': ' + userAnswer[j].nextSibling.nodeValue.trim());
+                        }
+                    }
+                }
+            }
+
+            var resultDiv = document.getElementById('result');
+            var scoreElement = document.getElementById('score');
+            var correctAnswersElement = document.getElementById('correctAnswersList');
+
+            scoreElement.textContent = 'Votre score est : ' + score + '/' + totalQuestions;
+
+            correctAnswersElement.innerHTML = '';
+            correctAnswersList.forEach(function (answer) {
+                var li = document.createElement('li');
+                li.textContent = answer;
+                correctAnswersElement.appendChild(li);
+            });
+
+            resultDiv.style.display = 'block';
+            alert('Quiz terminé');
+        }
+    </script>
+
+</body>
+<div class="footer">
+    <p>&copy; Créé par Rihab Kacem. Tous droits réservés.</p>
+</div>
+</html>

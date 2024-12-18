@@ -1,0 +1,346 @@
+/* General Reset */
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: white;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    position: fixed;
+    background: rgb(221, 52, 185);
+    height: 80px;
+    width: 100%;
+  }
+  
+  .navbar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar #logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  
+  .navbar ul {
+    float: right;
+    margin: left 50px;
+  }
+  
+  .navbar ul li {
+    display: flex;
+    display: inline-block;
+    line-height: 80px;
+    margin-right:10px
+}
+  
+  
+  .navbar ul li a {
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    padding: 7px 13px;
+}
+  
+  
+  .navbar ul li a:hover {
+    background: #dbb4d8;
+    transition: .5s;
+  }
+
+
+/* Sections principales */
+main {
+  padding: 100px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Section des compétences */
+.skills {
+  margin-bottom: 60px;
+}
+
+.skills h2 {
+  font-size: 2.4em;
+  margin-bottom: 20px;
+  color: #9C27B0;
+  font-weight: 600;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grille flexible */
+  gap: 30px;
+}
+
+.skill {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-left: 6px solid #6A1B9A; /* Bordure mauve épaisse pour chaque compétence */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-5px); /* Effet de levée au survol */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Ombre plus marquée */
+}
+
+.skill i {
+  font-size: 50px;
+  color: #6A1B9A;
+  margin-bottom: 15px;
+}
+
+.skill h3 {
+  font-size: 1.6em;
+  margin-bottom: 12px;
+  color: #6A1B9A;
+}
+
+.skill p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Section matières étudiées */
+.subjects {
+  margin-bottom: 60px;
+}
+
+.subjects h2 {
+  font-size: 2.4em;
+  color: #9C27B0;
+  margin-bottom: 20px;
+}
+
+.subjects ul {
+  list-style: none;
+  padding: 0;
+}
+
+.subjects li {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Section loisirs */
+.hobbies {
+  margin-top: 60px;
+}
+
+.hobbies h2 {
+  font-size: 2.4em;
+  color: #9C27B0;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 1.8em;
+  margin-top: 25px;
+  color: #6A1B9A;
+}
+
+.hobbies p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+/* Galerie photo */
+.photo-gallery {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+.hobbies-img {
+  width: 30%; /* Augmenter la taille des images */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobbies-img:hover {
+  transform: scale(1.05); /* Zoom léger au survol */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Ombre plus marquée */
+}
+
+/* Section vidéo */
+.video-container {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  
+}
+
+.video-player {
+  width: 60%; /* Taille de la vidéo ajustée */
+  max-width: 800px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border: 5px solid #6A1B9A;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-player:hover {
+  transform: scale(1.05); /* Zoom léger au survol */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Pied de page */
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #9C27B0;
+  color: white;
+  margin-top: 50px;
+}
+
+footer p {
+  font-size: 1.1em;
+  color: #F3E5F5;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hobbies-img {
+    width: 45%;
+  }
+
+  .video-player {
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 2.5em;
+  }
+
+  header p {
+    font-size: 1.1em;
+  }
+}
+/* Galerie photo */
+.photo-gallery {
+  display: flex;
+  gap: 20px; /* Réduction de l'espace entre les images */
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.hobbies-img {
+  width: 18%; /* Réduction de la taille des images */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobbies-img:hover {
+  transform: scale(1.05); /* Zoom léger au survol */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+}
+
+/* Section vidéo */
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.video-player {
+  width: 45%; /* Réduction de la largeur de la vidéo */
+  max-width: 600px; /* Limite de la largeur maximale de la vidéo */
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border: 5px solid #6A1B9A;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Section vidéo */
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.video-player {
+  width: 35%; /* Réduction de la largeur de la vidéo à 35% de l'écran */
+  max-width: 500px; /* Limite la largeur maximale de la vidéo */
+  height: auto; /* Hauteur s'ajuste en fonction de la largeur */
+  border-radius: 10px; /* Bordure arrondie pour la vidéo */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre légère autour de la vidéo */
+  border: 5px solid #6A1B9A; /* Bordure mauve pour la vidéo */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-player:hover {
+  transform: scale(1.05); /* Zoom léger au survol */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+}
+.footer {
+  position: fixed;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ background-color:rgb(221, 52, 185);
+ color: white;
+ text-align: center;
+ height: 60px;
+  
+}
+.footer p{
+  margin-top: 15px;
+}
+
+
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .video-player {
+    width: 80%; /* La vidéo prend 80% de la largeur de l'écran sur petits appareils */
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hobbies-img {
+    width: 30%; /* Augmenter légèrement la taille des images sur les petits écrans */
+  }
+}
